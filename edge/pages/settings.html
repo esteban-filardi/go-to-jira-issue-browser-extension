@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Go to Jira Issue Extension Settings</title>
+        <style>            
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Go to Jira Issue Extension Settings</h1>
+
+            <form id="settingsForm">
+                <div>
+                    <label for="jiraBaseUrlInput">Jira Instance URL</label>
+                    <input type="url" id="jiraBaseUrlInput">
+                </div>
+                <div>
+                    <label for="defaultProjectKeyInput" >Default Project Key</label>
+                    <input type="text" id="defaultProjectKeyInput" pattern="[A-Za-z]*" title="Only letters are allowed">
+                </div>
+                <div>
+                    <button type="submit" id="saveAndCloseButton">Save and Close</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="settings.js"></script>
+    </body>
+</html>
