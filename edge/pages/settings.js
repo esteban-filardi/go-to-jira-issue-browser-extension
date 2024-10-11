@@ -10,6 +10,9 @@ var defaultProjectKeyInput;
     const settingsForm = document.getElementById('settingsForm');
     settingsForm.addEventListener('submit', onSettingsFormSubmit);
 
+    const configureHotkeysButton = document.getElementById('configureHotkeysButton');
+    configureHotkeysButton.onclick = onConfigureHotkeysButtonClick;
+
     await initializeFormValues();
 })();
 
@@ -48,3 +51,6 @@ async function onSettingsFormSubmit(event) {
     window.close();
 }
 
+function onConfigureHotkeysButtonClick(_event) { 
+    chrome.tabs.update({ url: 'edge://extensions/shortcuts' });   
+};
